@@ -9,20 +9,14 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="findNumberResponse">
+    <xs:element name="result">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="result" type="tns:result"/>
+                <xs:element name="code" type="xs:string"/>
+                <xs:element name="filenames" type="xs:string" nillable="true" minOccurs="0"
+                            maxOccurs="unbounded"/>
+                <xs:element name="error" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-
-    <xs:complexType name="result">
-        <xs:sequence>
-            <xs:element name="code" type="xs:string"/>
-            <xs:element name="fileName" type="xs:string"/>
-            <xs:element name="error" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
-
 </xs:schema>
